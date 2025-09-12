@@ -1,0 +1,131 @@
+.contenedor{
+    border: solid #555 2px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.encabezado{
+   background-color: #f7f3f0; 
+   border-radius: 10px;
+   display: flex;
+   flex-direction:row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.titulo{
+    background-color: #c9b79c; 
+    border-radius: 10px;
+    margin-right: 5px;   
+    height: 45px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+}
+
+.grupo-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:10px;
+}
+
+.links{
+    background-color: #a89f91; 
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 25px;
+    width: 800px;
+}
+
+.buscador{
+    background-color: #b7a99a; 
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 15px;
+    width: 500px;
+}
+
+.contenido{
+    background-color: #e6e2dc; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.banner{
+    background-color: #d4b483; 
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.lateralIzq{
+    background-color: #c1b7a1; 
+    border-radius: 10px;
+    height: 500px;
+    width: 300px;
+    margin-left: 5px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    gap:10px;
+}
+
+.sect1{
+    background-color: #dcd7cc; 
+    border-radius: 10px;
+    height: 150px;
+    width: 250px;
+    margin-top:20px;
+}
+
+.sect2{
+    background-color: #b3a58a; 
+    border-radius: 10px;
+    height: 150px;
+    width: 250px;
+}
+
+.sect3{
+    background-color: #f0ebe6; 
+    border-radius: 10px;
+    height: 400px;
+    width: 250px;
+    margin-bottom:20px;
+}
+
+.cuerpo{
+    background-color: #d9d4ca;
+    height: 500px;
+    width: 1200px;
+}
+
+.lateralDer{
+    background-color: #b8b0a3; 
+    border-radius: 10px;
+    height: 500px;
+    width: 300px;
+    margin-right: 5px;
+}
+
+.piepagina{
+    background-color: #d4b483; 
+    border-radius: 10px;
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.info{
+    background-color: #a18f7a; 
+    border-radius: 10px;
+    height: 80px;
+    width: 300px;
+}
