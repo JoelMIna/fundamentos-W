@@ -9,7 +9,7 @@ const tableBodyData = [
     ];
     
     function loadTableData() {
-        const tableBody = document.querySelector("#table-body");
+        const tableBody = document.querySelector("tabledata1");
         tableBody.innerHTML = "";
 
         tableBodyData.forEach((row, index) => {
