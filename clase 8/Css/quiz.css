@@ -3,7 +3,7 @@ body {
    margin: 0;
    padding: 0;
    font-family: Arial, sans-serif;
-   background-color: #2e2e2e;
+   background-color: #5a5858;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -17,7 +17,7 @@ body {
 .logo {
    font-size: 36px;
    margin-bottom: 20px;
-   color: #fff;
+   color: #000000;
 }
 .logo-e {
    color: #4CAF50; /* Verde */
@@ -66,7 +66,7 @@ input[type="password"] {
    border-radius: 5px;
    font-size: 15px;
    cursor: pointer;
-   color: #fff;
+   color: #ffffff;
 }
 .btn-register {
    background-color: #007bff;
@@ -86,4 +86,19 @@ input[type="password"] {
 .signin-text a {
    color: red;
    text-decoration: none;
+}
+
+/* Círculo con la J */
+.circle {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: linear-gradient(135deg, #000000, #4CAF50);
+   color: white;
+   font-size: 28px;
+   font-weight: bold;
+   margin-right: 5px;
 }
