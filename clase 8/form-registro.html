@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Css/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">
+            <span class="circle">J</span>oel <span class="logo-admin">Mina</span>
+        </h1>
+        <div class="form-box">
+            <form>
+                <label for="username">USER NAME</label>
+                <input type="text" id="username" name="username" placeholder="User Name" required>
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+
+                <label for="passwordc">CONFIRM PASSWORD</label>
+                <input type="password" id="passwordc" name="password" placeholder="Confirm Password" required>
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Agree the terms and policy</label>
+                </div>
+                <button type="submit" class="btn btn-register">REGISTER</button>
+               
+            </form>
+            <p class="signin-text">Already have account ? <a href="#">Sign in</a></p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script src="jquery.js"></script>
+<script>
+     const regex = {
+        nombre: /^[A-Za-zÀ-ÿ'´`¨^.\-\s]{2,60}$/,
+        apellido: /^[A-Za-zÀ-ÿ'´`¨^.\-\s]{2,60}$/,
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+        password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s]).{8,}$/,
+    };
+    $('form').on('submit', function(event) {
+        console.log('Formulario enviado');
+        event.preventDefault(); // Evita el envío del formulario por defecto
+
+        const nombre = $('#username').val();
+        const email = $('#email').val();
+        const password = $('#password').val();
+        let valid = true;
+
+        if (!regex.nombre.test(nombre)) {
+            alert('Nombre inválido. Debe tener entre 2 y 60 caracteres y solo letras.');
+            valid = false;
+        }
+
+        if (!regex.email.test(email)) {
+            alert('Email inválido. Por favor, ingrese un email válido.');
+            valid = false;
+        }
+
+        if (!regex.password.test(password)) {
+            alert('Contraseña inválida. Debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y un carácter especial.');
+            valid = false;
+        }
+
+        if (password !== $('#passwordc').val()) {
+            alert('Las contraseñas no coinciden.');
+            valid = false;
+        }
+
+        if (valid) {
+            alert('Formulario enviado correctamente.');
+            // Aquí puedes proceder con el envío del formulario o cualquier otra acción
+        }
+        const squeryString = `?nombre=${encodeURIComponent(nombre)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+        window.location.href = 'registro-data.html' + squeryString;
+    });
+</script>
